@@ -1,0 +1,2 @@
+user vagrant
+sudo password by default on instances is 'vagrant'. Then, use it on cluster deployment
