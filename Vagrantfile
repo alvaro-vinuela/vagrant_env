@@ -10,7 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  8.times do |n|
+  12.times do |n|
     config.vm.define "vm#{n + 1}" do |cc|
 #      config.vbguest.auto_update = false
 
