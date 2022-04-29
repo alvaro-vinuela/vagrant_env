@@ -10,7 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  12.times do |n|
+    12.times do |n|
     config.vm.define "vm#{n + 1}" do |cc|
 #      config.vbguest.auto_update = false
 
@@ -28,7 +28,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       cc.vm.host_name = "kvm#{n + 1}"
       cc.vm.network :forwarded_port, guest: 80, host: "80#{n}".to_i, auto_correct: true
       cc.vm.network :private_network, ip: "10.10.10.1#{n}"
-      cc.vm.network :public_network,  ip: "192.168.1.10#{n}"
+#cc.vm.network :public_network,  ip: "192.168.1.1#{n}"
+cc.vm.network :public_network,  ip: "192.168.1.10#{n}"
 #      config.vbguest.auto_update = false
       config.vm.provider :virtualbox do |vb|
       #  vb.customize ["modifyvm", :id, "--memory", "8192"]

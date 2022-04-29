@@ -2,6 +2,7 @@
 
 # copy your id_rsa.pub as vagrant.pub on /home/alvaro/Documentos
 cat /vagrant/vagrant.pub  | tee -a /home/vagrant/.ssh/authorized_keys
+cat /vagrant/vagrant.pub  | tee -a /root/.ssh/authorized_keys
 chmod 0644 /home/vagrant/.ssh/authorized_keys
 echo "setup passsword less ok"
 
