@@ -20,6 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       #cc.vm.box = "boxomatic/debian-9"
       #cc.vm.box = "bento/centos-8.4"
       #cc.vm.box = "bento/centos-7.9"
+      #cc.vm.box = "opensuse/Tumbleweed.x86_64"
 #       cc.disksize.size = '22GB'
 
 #      cc.vm.box = "marcv81/xenial64"
@@ -33,7 +34,7 @@ cc.vm.network :public_network,  ip: "192.168.1.10#{n}"
 #      config.vbguest.auto_update = false
       config.vm.provider :virtualbox do |vb|
       #  vb.customize ["modifyvm", :id, "--memory", "8192"]
-        vb.customize ["modifyvm", :id, "--memory", "2048"]
+        vb.customize ["modifyvm", :id, "--memory", "2548"]
         vb.customize ["modifyvm", :id, "--audio", "none", "--usb", "on", "--usbehci", "off"]
       end
       cc.vm.synced_folder "/home/alvaro/Documentos/", "/vagrant", id: "vagrant-root", :owner => "vagrant", :group => "vagrant"
