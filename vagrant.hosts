@@ -1,13 +1,13 @@
 192.168.1.12     Genkidama
-192.168.1.100    kvm1
-192.168.1.101    kvm2
-192.168.1.102    kvm3
-192.168.1.103    kvm4
-192.168.1.104    kvm5
-192.168.1.105    kvm6
-192.168.1.106    kvm7
-192.168.1.107    kvm8
-192.168.1.108    kvm9
-192.168.1.109    kvm10
-192.168.1.110    kvm11
-192.168.1.111    kvm12
+192.168.1.100    kvm1 kvm1.kaitoserver.es
+192.168.1.101    kvm2 kvm2.kaitoserver.es 
+192.168.1.102    kvm3 kvm3.kaitoserver.es
+192.168.1.103    kvm4 kvm4.kaitoserver.es
+192.168.1.104    kvm5 kvm5.kaitoserver.es
+192.168.1.105    kvm6 kvm6.kaitoserver.es
+192.168.1.106    kvm7 kvm7.kaitoserver.es
+192.168.1.107    kvm8 kvm8.kaitoserver.es
+192.168.1.108    kvm9 kvm9.kaitoserver.es
+192.168.1.109    kvm10 kvm10.kaitoserver.es
+192.168.1.110    kvm11 kvm11.kaitoserver.es
+192.168.1.111    kvm12 kvm12.kaitoserver.es
