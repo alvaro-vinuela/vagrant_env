@@ -11,27 +11,28 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
     12.times do |n|
-    config.vm.define "vm#{n + 1}" do |cc|
-#      config.vbguest.auto_update = false
-
+      config.vm.define "vm#{n + 1}" do |cc|
+      # config.vbguest.auto_update = false
       cc.vm.box = "ubuntu/focal64"
       #cc.vm.box = "ubuntu/bionic64"
       #cc.vm.box = "boxomatic/debian-10"
       #cc.vm.box = "boxomatic/debian-9"
       #cc.vm.box = "bento/centos-8.4"
-      #cc.vm.box = "bento/centos-7.9"
-      #cc.vm.box = "opensuse/Tumbleweed.x86_64"
-#       cc.disksize.size = '22GB'
+      #cc.vm.box = "bento/centos-7.9" -- useless due to repo problem. use vbox
+      #cc.vm.box = "SLES-15-SP3"
+      #cc.vm.box = "opensuse/Leap-15.4.x86_64"
 
-#      cc.vm.box = "marcv81/xenial64"
-#      cc.vm.box_url = "https://vagrantcloud.com/jkyle/boxes/centos-7.0-x86_64/versions/1.1/"
-      #cc.vm.host_name = "n#{n + 1}"
+      # cc.disksize.size = '22GB'
+      # cc.vm.box = "marcv81/xenial64"
+      # cc.vm.box_url = "https://vagrantcloud.com/jkyle/boxes/centos-7.0-x86_64/versions/1.1/"
+      # cc.vm.host_name = "n#{n + 1}"
+      #cc.vm.host_name = 'kvm10.kaitoserver.es'
       cc.vm.host_name = "kvm#{n + 1}"
       cc.vm.network :forwarded_port, guest: 80, host: "80#{n}".to_i, auto_correct: true
       cc.vm.network :private_network, ip: "10.10.10.1#{n}"
-#cc.vm.network :public_network,  ip: "192.168.1.1#{n}"
-cc.vm.network :public_network,  ip: "192.168.1.10#{n}"
-#      config.vbguest.auto_update = false
+      #cc.vm.network :public_network,  ip: "192.168.1.1#{n}"
+      cc.vm.network :public_network,  ip: "192.168.1.10#{n}"
+      # config.vbguest.auto_update = false
       config.vm.provider :virtualbox do |vb|
       #  vb.customize ["modifyvm", :id, "--memory", "8192"]
         vb.customize ["modifyvm", :id, "--memory", "2548"]
