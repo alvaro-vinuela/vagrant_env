@@ -13,11 +13,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     12.times do |n|
       config.vm.define "vm#{n + 1}" do |cc|
       # config.vbguest.auto_update = false
-      #cc.vm.box = "ubuntu/jellyfish64"
-      cc.vm.box = "ubuntu/focal64"
+      # cc.vm.box = "bento/ubuntu-22.04"
+      #cc.vm.box = "bento/ubuntu-20.04"
+      #cc.vm.box = "ubuntu/focal64"
       #cc.vm.box = "ubuntu/bionic64"
       #cc.vm.box = "boxomatic/debian-10"
-      #cc.vm.box = "boxomatic/debian-9"
+      #cc.vm.box = "boxomatic/debian-9"  
+      cc.vm.box = "boxomatic/centos-stream-9"
       #cc.vm.box = "bento/centos-8.4"
       #cc.vm.box = "bento/centos-7.9" -- useless due to repo problem. use vbox
       #cc.vm.box = "SLES-15-SP3"
@@ -51,7 +53,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
-  # config.vm.network :forwarded_port, guest: 80, host: 8080
+  #config.vm.network :forwarded_port, guest: 9999, host: 9999
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
